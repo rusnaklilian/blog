@@ -1,0 +1,254 @@
+/* --- ГЛОБАЛЬНЫЕ СТИЛИ --- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-image: url('https://tvn.md/wp-content/uploads/2023/03/1-19-920x615-1-696x407.jpg'); /* Замените ссылку на изображение */
+    background-size: cover;
+    background-position: center;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+}
+
+/* --- КОНТЕЙНЕР ОСНОВНОГО КОНТЕНТА --- */
+.container {
+    max-width: 900px;
+    width: 100%;
+    padding: 20px;
+    margin-top: calc(70px + 5vh + 20px); /* Navbar (70px) + 5% высоты экрана + дополнительный отступ 20px */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* --- НАВИГАЦИЯ --- */
+nav {
+    width: 100%;
+    height: 70px;
+    background-color: #222;
+    display: flex;
+    justify-content: center; /* Центрируем элементы */
+    align-items: center;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+nav a,
+nav button {
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    margin: 0 15px;
+    padding: 10px 29px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* --- КНОПКИ НАВИГАЦИИ --- */
+nav a {
+    background: transparent;
+    border: 2px solid transparent;
+}
+
+nav a:hover {
+    color: aqua;
+}
+
+
+/* --- КНОПКА LOG OUT --- */
+nav button {
+    background: red;
+    border: 1px solid #ccc; /* Толщина границы */
+    cursor: pointer;
+    padding: 10px 15px; /* Размеры отступов */
+    font-size: 16px;
+    border-radius: 5px;
+    width: auto; /* Убираем фиксированную ширину, чтобы длина границы была зависима от контента */
+    max-width: 150px; /* Ограничиваем максимальную длину кнопки */
+    text-align: center;
+}
+
+nav button:hover {
+    background: darkred;
+}
+
+
+/* --- ПОСТЫ --- */
+.post {
+    width: 600px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 30% 0 15px 0; /* Добавляем отступ сверху в 50px */
+    text-align: center; /* Центрируем текст */
+}
+
+.post h1 {
+    font-size: 22px;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.post p {
+    font-size: 16px;
+    color: #555;
+}
+
+.post h3 {
+    font-weight: bold;
+    font-size: 14px;
+    color: #777;
+}
+
+/* --- СТИЛИ ДЛЯ СТРАНИЦЫ СОЗДАНИЯ ПОСТА --- */
+.createPostPage {
+    width: 600px;
+    margin: 50px auto;
+    background-color: #363636;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30% 0 15px 0; /* Добавляем отступ сверху в 50px */
+}
+
+/* --- Заголовок страницы --- */
+.createPostPage h1 {
+    font-size: 28px;
+    color: white; /* Цвет текста изменен на белый, чтобы контрастировать с фоном */
+    margin-bottom: 20px;
+}
+
+/* --- ГРУППЫ ВВОДНЫХ ПОЛЕЙ --- */
+.inputGp {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.inputGp label {
+    font-size: 18px;
+    color: #fff; /* Белый цвет для текста */
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* --- ПОЛЯ ВВОДА --- */
+.inputGp input,
+.inputGp textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #333;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+/* --- КНОПКА ОТПРАВКИ --- */
+button {
+    background: green;
+    color: white;
+    font-size: 18px;
+    padding: 12px 20px;
+    border: 1px solid #ccc; /* Бордер для кнопки "Create a Post" */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+    margin-top: 20px;
+}
+
+button:hover {
+    background: rgb(5, 95, 0);
+}
+
+/* --- АДАПТИВНОСТЬ --- */
+@media (max-width: 768px) {
+    .post {
+        width: 90%;
+    }
+
+    nav {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    nav a,
+    nav button {
+        margin: 5px;
+    }
+
+    .createPostPage {
+        width: 90%;
+    }
+
+    .createPostPage h1 {
+        font-size: 24px;
+    }
+
+    .createPostPage .inputGp input,
+    .createPostPage .inputGp textarea {
+        font-size: 14px;
+    }
+
+    .createPostPage button {
+        font-size: 16px;
+    }
+}
+
+
+
+
+/* --- Стили для контейнера loginPage --- */
+.loginPage {
+    border: 2px solid #ccc; /* Добавляем границу вокруг всего контейнера */
+    padding: 20px; /* Отступ внутри контейнера */
+    border-radius: 10px; /* Закругленные углы */
+    background-color: #fff; /* Белый фон для контейнера */
+    width: 300px; /* Устанавливаем фиксированную ширину */
+    text-align: center; /* Центрируем текст */
+    margin: 100% 0 15px 0; /* Добавляем отступ сверху в 50px */
+    
+  }
+  
+  /* --- Стили для текста внутри loginPage --- */
+  .loginPage p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px; /* Отступ снизу для текста */
+  }
+  
+  /* --- Стили для кнопки Sign in With Google --- */
+  .login-with-google-btn {
+    background-color: green; /* Цвет фона кнопки */
+    color: white;
+    font-size: 16px;
+    padding: 12px 20px;
+    border: 2px solid rgb(0, 85, 0); /* Граница того же цвета, что и фон */
+    border-radius: 5px; /* Закругленные углы */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  /* --- Эффект при наведении на кнопку --- */
+  .login-with-google-btn:hover {
+    background-color: green; /* Темнее при наведении */
+    border-color: rgb(0, 85, 0); /* Меняем цвет границы при наведении */
+  }
+  
