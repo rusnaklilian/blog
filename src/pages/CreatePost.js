@@ -13,6 +13,7 @@ function CreatePost({ isAuth }) {
   if (!isAuth) {
     navigate('/login');
   }
+  // Function to create a new post
 
   const createPost = async () => {
     try {
