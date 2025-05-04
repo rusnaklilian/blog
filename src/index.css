@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    background-image: url('https://tvn.md/wp-content/uploads/2023/03/1-19-920x615-1-696x407.jpg'); /* Замените ссылку на изображение */
+    background: linear-gradient(to right, blue,aqua, rgb(255, 0, 144));
     background-size: cover;
     background-position: center;
     color: #333;
